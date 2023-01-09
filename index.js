@@ -101,7 +101,8 @@ let maxProfit = 0;
 let dateLoss = 0;
 let maxLoss = 0;
 
-for(let i = 0; i< finances.length; i++){
+// AN ARRAY IS CREATED TO STORE THE CHANGES IN PROFIT/LOSSES FROM MONTH TO MONTH OVER THE ENTIRE PERIOD
+for(let i = 0; i< finances.length-1; i++){
     trackChange[i] = new Array(2);
 }
 
@@ -113,23 +114,17 @@ for (let i = 0; i < finances.length; i++) {
     netTotal += finances[i][1];
 }
 
-// console.log("*** TRACK CHANGE IN PROFIT/LOSS FROM MONTH TO MONTH AND DISPLAY THE CHANGE IN CONSOLE ***");
-
 // TRACK CHANGE IN PROFIT/LOSSES FROM MONTH TO MONTH BASED ON PROFIT/LOSSES OF 1ST MONTH OCCURING IN FEB 2010
-trackChange[0] = finances[0];
 for (let k = 0; k < finances.length - 1; k++) {
-    trackChange[k + 1][1] = finances[k + 1][1] - finances[k][1];
-    trackChange[k + 1][0] = finances[k + 1][0];
-    // console.log(trackChange[k]);
+    trackChange[k][1] = finances[k + 1][1] - finances[k][1];
+    trackChange[k][0] = finances[k + 1][0];
 }
 
-// DISPLAY THE CHANGE FROM MONTH TO MONTH IN CONSOLE (DISABLED)
-// console.log(trackChange[finances.length - 1]);
-
-// FIND AVERAGE CHANGE BASED ON THE TOTAL NUMBER OF CHANGE (i.e. TOTAL NO. OF MONTH -1 = monthNum - 1) FROM MONTH TO MONTH
-for (let i = 1; i < trackChange.length; i++) {
+// FIND AVERAGE CHANGE BASED ON THE TOTAL NUMBER OF CHANGE (i.e. TOTAL NO. OF MONTH -1 => monthNum - 1) FROM MONTH TO MONTH
+for (let i = 0; i < trackChange.length; i++) {
     profitChange += trackChange[i][1];
 }
+
 averageChange = profitChange / (monthNum-1);
 averageChange = Math.round(averageChange*100)/100;
 
@@ -146,12 +141,6 @@ for(let i = 1; i < trackChange.length; i++) {
         }
     }
 }
-
-// DISPLAY OF SORTING RESULT (DISABLED)
-// console.log("***** DISPLAY OF SORTING RESULT *****");
-// for (let k = 0; k < trackChange.length; k++) {
-//     console.log(trackChange[k]);
-// }
 
 // FIND THE GREATEST INCREASE IN PROFITS AND THE GREATEST DECREASE IN LOSSES (DATE AND MONTH)
 dateProfit = trackChange[(trackChange.length-1)][0];
