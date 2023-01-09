@@ -115,7 +115,7 @@ for (let i = 0; i < finances.length; i++) {
 
 // console.log("*** TRACK CHANGE IN PROFIT/LOSS FROM MONTH TO MONTH AND DISPLAY THE CHANGE IN CONSOLE ***");
 
-// TRACK CHANGE IN PROFIT/LOSS FROM MONTH TO MONTH BASED ON 1ST MONTH PROFIT/LOSSES OCCURING IN JAN 2010
+// TRACK CHANGE IN PROFIT/LOSS FROM MONTH TO MONTH BASED ON PROFIT/LOSSES OF 1ST MONTH OCCURING IN FEB 2010
 // AND THE PRECEDING MONTH IS ZERO PROFIT/LOSSES
 trackChange[0] = finances[0];
 for (let k = 0; k < finances.length - 1; k++) {
@@ -127,11 +127,11 @@ for (let k = 0; k < finances.length - 1; k++) {
 // DISPLAY THE CHANGE FROM MONTH TO MONTH IN CONSOLE (DISABLED)
 // console.log(trackChange[finances.length - 1]);
 
-// FIND Average Change
-for (let i = 0; i < finances.length; i++) {
+// FIND AVERAGE CHANGE BASED ON THE TOTAL NUMBER OF CHANGE (i.e. TOTAL NO. OF MONTH -1 = monthNum - 1) FROM MONTH TO MONTH
+for (let i = 1; i < trackChange.length; i++) {
     profitChange += trackChange[i][1];
 }
-averageChange = profitChange / monthNum;
+averageChange = profitChange / (monthNum-1);
 averageChange = Math.round(averageChange*100)/100;
 
 // SORTING IN INCREASING ORDER OF THE CHANGE OF PROFTS/LOSSES
