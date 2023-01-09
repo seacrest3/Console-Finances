@@ -5,6 +5,10 @@ Unit 4 Challenge: Create code for analyzing the financial records of a company
 
 Given a financial dataset, it is required to create code for analyzing the financial records of a company using Javascript.
 
+The change in profit/losses from month to month is based on profit/losses of 1st month occuring in Feb 2010.
+The average change is calculated based on the total number of change (i.e. total no. of month - 1) from month to month.
+
+
 ### User Story
 
 AS A web developer, I WANT to practice my Javascript skills by analyzing a financial dataset using Javascript to produce the financial records of a company.

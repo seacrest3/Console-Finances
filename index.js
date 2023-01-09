@@ -115,8 +115,7 @@ for (let i = 0; i < finances.length; i++) {
 
 // console.log("*** TRACK CHANGE IN PROFIT/LOSS FROM MONTH TO MONTH AND DISPLAY THE CHANGE IN CONSOLE ***");
 
-// TRACK CHANGE IN PROFIT/LOSS FROM MONTH TO MONTH BASED ON PROFIT/LOSSES OF 1ST MONTH OCCURING IN FEB 2010
-// AND THE PRECEDING MONTH IS ZERO PROFIT/LOSSES
+// TRACK CHANGE IN PROFIT/LOSSES FROM MONTH TO MONTH BASED ON PROFIT/LOSSES OF 1ST MONTH OCCURING IN FEB 2010
 trackChange[0] = finances[0];
 for (let k = 0; k < finances.length - 1; k++) {
     trackChange[k + 1][1] = finances[k + 1][1] - finances[k][1];
