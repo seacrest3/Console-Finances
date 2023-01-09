@@ -165,5 +165,5 @@ maxLoss = trackChange[(0)][1];
 console.log("Financial Analysis\n----------------------------");
 console.log("Total Months: " + monthNum + "\n" + "Total: " + "$" + netTotal
     + "\n" + "Average Change: " + "$" + averageChange + "\n" + "Greatest Increase in Profits: " + dateProfit
-    + " ($" + maxProfit + ")" + "\n" + "Greatest Increase in Profits: " + dateLoss + " ($" + maxLoss + ")");
+    + " ($" + maxProfit + ")" + "\n" + "Greatest Decrease in Profits: " + dateLoss + " ($" + maxLoss + ")");
 
