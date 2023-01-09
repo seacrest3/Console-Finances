@@ -95,7 +95,7 @@ let trackChange = new Array(2);
 let profitChange =0;
 let averageChange = 0;
 let tempAmount = 0;
-let tempMonth = ''
+let tempMonth = '';
 let dateProfit = 0;
 let maxProfit = 0;
 let dateLoss = 0;
@@ -139,7 +139,7 @@ for(let i = 1; i < trackChange.length; i++) {
     for (let j = 0; j < i; j++) {
         if (trackChange[i][1] < trackChange[j][1]) {
             tempAmount = trackChange[i][1];
-            tempMonth = trackChange[i][0]
+            tempMonth = trackChange[i][0];
             trackChange[i][1] = trackChange[j][1];
             trackChange[i][0] = trackChange[j][0];
             trackChange[j][1] = tempAmount;
