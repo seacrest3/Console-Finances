@@ -149,7 +149,6 @@ dateLoss = trackChange[(0)][0];
 maxLoss = trackChange[(0)][1];
 
 // DISPLAY THE RESULT OF OF FINANCIAL ANALYSIS
-// console.log("***** DISPLAY THE RESULT OF FINANCIAL ANALYSIS ******");
 console.log("Financial Analysis\n----------------------------");
 console.log("Total Months: " + monthNum + "\n" + "Total: " + "$" + netTotal
     + "\n" + "Average Change: " + "$" + averageChange + "\n" + "Greatest Increase in Profits: " + dateProfit
